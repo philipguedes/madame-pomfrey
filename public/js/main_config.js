@@ -32,21 +32,33 @@ angular
 
         var inicio = {
             name: 'inicio',
+            templateUrl: 'parcial/index.html'
+        }
+        var home = {
+            name: 'inicio.home',
             url: '/',
             templateUrl: 'parcial/home.html',
             controller: 'UsuarioController',
             controllerAs: 'u'
         }
-        var tables = {
-            name: 'inicio.tables',
+        var historico = {
+            name: 'inicio.historico',
             url: '/',
-            templateUrl: 'tables.html',
+            templateUrl: 'parcial/historico.html',
             controller: 'UsuarioController',
             controllerAs: 'u'
         }
 
         $stateProvider
-            .state(inicio);
+            .state(inicio)
+            .state(home)
+            .state({
+                name: 'inicio.historico',
+                url: '/',
+                templateUrl: 'parcial/historico.html',
+                controller: 'UsuarioController',
+                controllerAs: 'u'
+            });
 
         $urlRouterProvider.otherwise('/');
 

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <a class="navbar-brand" href="index.html">Madame Pomfrey</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="DASHBOARD É O CARAI">
+        <a class="nav-link" ui-sref="inicio.historico">
+          <i class="fa fa-fw fa-home"></i>
+          <span class="nav-link-text">Inicio</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+        <a class="nav-link" href="charts.html">
+          <i class="fa fa-fw fa-area-chart"></i>
+          <span class="nav-link-text">Perfil</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <a class="nav-link" href="tables.html">
+          <i class="fa fa-fw fa-table"></i>
+          <span class="nav-link-text">Prontuário</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+        <a class="nav-link" href="#">
+          <i class="fa fa-fw fa-link"></i>
+          <span class="nav-link-text">Atestado</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Aqui é onde fica o botão Logout do topo -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+          <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="content-wrapper">
+  <div ui-view></div>
+</div>
