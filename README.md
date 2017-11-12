@@ -8,7 +8,7 @@ que tem como finalidade centralizar o histórico médico de um cidadão comum.
 ## MVP
 
 Com o intuito de validar a ideia e completar um protótipo ao longo das 24 horas do evento, o escopo foi reduzido para apenas o 
-histórico de vacinas do paciente, afim de ser uma amostra do projeto como um todo.
+histórico de vacinas do paciente, afim de ser uma amostra do potencial do projeto como um todo.
 
 ## Tecnologias
 - Node.js
