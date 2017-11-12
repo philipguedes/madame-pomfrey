@@ -38,14 +38,33 @@
             <div class="modal-body">
                 <form action="">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Cartão SUS</label>
-                        <input class="form-control" id="exampleInputEmail1" ng-model="path" ng-init="path='706905129075639'" type="text" aria-describedby="emailHelp"
-                            placeholder="Informe o número do cartão SUS do paciente">
+                        
+                        <p><strong>Hepatite B</strong></p>
+                        
+                        <label for="exampleInputEmail1">Data</label>
+                        <input class="form-control" id="exampleInputEmail1" ng-model="dataMock" type="text" aria-describedby="emailHelp"
+                            placeholder="Informe a data (ex.: 12/11/2017)">
+
+
+                        <label for="exampleInputEmail1">CNES</label>
+                        <input class="form-control" id="exampleInputEmail1" ng-model="cnesMock" type="text" aria-describedby="emailHelp"
+                            placeholder="CNES:5377486">
+                        
+                        <label for="exampleInputEmail1">Responsavel</label>
+                        <input class="form-control" id="exampleInputEmail1" ng-model="responsavelMock" type="text" aria-describedby="emailHelp"
+                            placeholder="Nome do responsavel">
+
+                        <!-- <input class="form-control" id="exampleInputEmail1" ng-model="path" ng-init="responsavelMock='Dr. Jose'" type="text" aria-describedby="emailHelp"
+                            placeholder="Informe o número do cartão SUS do paciente"> -->
+
+                        
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button> -->
+                <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+
             </div>
         </div>
 
@@ -157,7 +176,7 @@
                             </tr>
                             <tr>
                                 <th>Hepatite B</th>
-                                <td bgcolor="#C8E6C9"></td>
+                                <td bgcolor="#C8E6C9">{{u.dataMock}} <br>{{u.cnesMock}} <br>{{u.responsavelMock}}</td>
                                 <td bgcolor="#C8E6C9"></td>
                                 <td bgcolor="#C8E6C9"></td>
                                 <td></td>
