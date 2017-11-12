@@ -83,4 +83,19 @@ api.generateCertificate = function (req, res) {
 
 }
 
+api.recoverCertificate = function (req, res) {
+  var path = '/user/' + req.body.path;
+  console.log(path);
+  database.ref(path).once('value').then((data) => {
+    console.log('lendo usuario')
+
+    console.log(data.response);
+    res.status(200);
+    res.json({
+      response: data
+    });
+    
+  });
+}
+
 module.exports = api;

@@ -8,4 +8,6 @@ module.exports = function(app) {
   app.route('/user/create').post(api.createUser);
 
   app.route('/user/certificate').post(api.generateCertificate);
+
+  app.route('/user/certificate/recover').post(api.recoverCertificate);
 }
