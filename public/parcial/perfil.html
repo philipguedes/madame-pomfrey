@@ -1,1 +1,110 @@
-<h1>Perfil</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Perfil</title>
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="card card-register mx-auto mt-15">
+            <div class="card-header">Informações do usuário</div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nome</label>
+                        <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" ng-disabled="true" ng-model="u.usuario.nome">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="exampleInputName">CPF</label>
+                                <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" ng-disabled="true" ng-model="u.usuario.cpf">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="exampleInputLastName">Cartão SUS</label>
+                                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" ng-disabled="true" ng-model="u.usuario.sus">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" ng-model="u.usuario.email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Endereço</label>
+                        <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" ng-model="u.usuario.endereco">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="exampleInputName">Cidade</label>
+                                <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" ng-model="u.usuario.cidade">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Selecione seu estado</label>
+                                <select name="estado" class="form-control" ng-model="u.usuario.estado">
+                                    <option selected="" value="">Selecione o Estado (UF)</option>
+                                    <option value="Acre">Acre</option>
+                                    <option value="Alagoas">Alagoas</option>
+                                    <option value="Amapá">Amapá</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Bahia">Bahia</option>
+                                    <option value="Ceará">Ceará</option>
+                                    <option value="Distrito Federal">Distrito Federal</option>
+                                    <option value="Espírito Santo">Espírito Santo</option>
+                                    <option value="Goiás">Goiás</option>
+                                    <option value="Maranhão">Maranhão</option>
+                                    <option value="Mato Grosso">Mato Grosso</option>
+                                    <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                                    <option value="Minas Gerais">Minas Gerais</option>
+                                    <option value="Pará">Pará</option>
+                                    <option value="Paraíba">Paraíba</option>
+                                    <option value="Paraná">Paraná</option>
+                                    <option value="Pernambuco">Pernambuco</option>
+                                    <option value="Piauí">Piauí</option>
+                                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                                    <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                    <option value="Rondônia">Rondônia</option>
+                                    <option value="Roraima">Roraima</option>
+                                    <option value="Santa Catarina">Santa Catarina</option>
+                                    <option value="São Paulo">São Paulo</option>
+                                    <option value="Sergipe">Sergipe</option>
+                                    <option value="Tocantins">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input class="form-control" id="exampleInputPassword1" type="password" ng-model="u.usuario.senha">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Responsável</label>
+                        <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" ng-model="u.usuario.responsavel">
+                    </div>
+                    <a class="btn btn-primary btn-block" href="login.html">Atualizar informações</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+
+</html>
