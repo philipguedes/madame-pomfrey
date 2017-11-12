@@ -2,7 +2,7 @@ angular
     .module('madame-pomfrey')
     .controller('UsuarioController', function ($scope, $http) {
         vm = this;
-
+        //teste
         vm.home = [{
             imagem:"http://www.metodista.br/rronline/noticias/saude/2013/04/carteira-de-vacinacao/@@images/208c32ee-8d51-487a-bee5-5bbcb0b3fe46.jpeg",
             link:"https://www.visaooeste.com.br/estado-pode-ter-carteira-de-vacinacao-informatizada/ ",
