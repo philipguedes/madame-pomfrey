@@ -38,19 +38,14 @@ angular
         var home = {
             name: 'inicio.home',
             url: '/',
-            templateUrl: 'parcial/home.html',
+            templateUrl: 'parcial/usuario/home.html',
             controller: 'UsuarioController',
             controllerAs: 'u',
-            data:{ 
-                css:'parcial/postit.css'}
+            data: {
+                css: 'parcial/postit.css'
+            }
         }
-        var historico = {
-            name: 'inicio.historico',
-            url: '/',
-            templateUrl: 'parcial/historico.html',
-            controller: 'UsuarioController',
-            controllerAs: 'u'
-        }
+
 
         $stateProvider
             .state(inicio)
@@ -58,23 +53,30 @@ angular
             .state({
                 name: 'inicio.perfil',
                 url: '/perfil',
-                templateUrl: 'parcial/perfil.html',
+                templateUrl: 'parcial/usuario/perfil.html',
                 controller: 'UsuarioController',
                 controllerAs: 'u'
             })
             .state({
                 name: 'inicio.prontuario',
                 url: '/prontuario',
-                templateUrl: 'parcial/prontuario.html',
+                templateUrl: 'parcial/usuario/prontuario.html',
                 controller: 'UsuarioController',
                 controllerAs: 'u'
             })
             .state({
                 name: 'inicio.atestado',
                 url: '/atestado',
-                templateUrl: 'parcial/atestado.html',
+                templateUrl: 'parcial/usuario/atestado.html',
                 controller: 'UsuarioController',
                 controllerAs: 'u'
+            })
+            .state({
+                name: 'inicio.profissional',
+                url: '/profissional',
+                templateUrl: 'parcial/profissional/profissional.html',
+                controller: 'ProfissionalController',
+                controllerAs: 'p'
             });
 
         $urlRouterProvider.otherwise('/');
