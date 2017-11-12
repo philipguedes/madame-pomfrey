@@ -1,2 +1,32 @@
-<h6>{{p.mensagem}}</h6>
-<!-- A mensagem acima vai mostrar a palavara 'Profissional'. Para mudar essa mensagem, mude em profissional-controller.js em controllers -->
+<h3>Atualização de cadastro do paciente</h3>
+<div class="card card-register mx-auto mt-15">
+    <div class="card-header">Informações do usuário</div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Cartão SUS</label>
+                <input class="form-control" id="exampleInputEmail1" ng-model="path" ng-init="path='706905129075639'" type="text" aria-describedby="emailHelp" placeholder="Informe o número do cartão SUS do paciente">
+            </div>
+    </div>
+    <center>
+    <div class="nav-tabs-responsive scrollbars">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active">
+                    <button class="btn btn-linkt" ng-click="p.test()" data-toggle="tab" data-target="#atividade">Vacinas</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</center>
+</div>
+<br>
+
+<div class="nav-tabs-responsive scrollbars">
+    <div class="tab-content">
+            <div class="tab-pane fade" id="atividade">
+                <div class="card card-body">
+                    <div ng-bind-html="relatorio"></div>
+                </div>
+            </div>
+    </div>
+</div>
