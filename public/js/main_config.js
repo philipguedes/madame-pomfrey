@@ -91,7 +91,7 @@ angular
                 url: '/certificado',
                 templateUrl: 'parcial/certificado/certificado.html',
                 controller: 'CertificadoController',
-                controllerAs: 'c'
+                controllerAs: 'u'
             });
 
         $urlRouterProvider.otherwise('/');
