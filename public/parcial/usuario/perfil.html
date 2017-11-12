@@ -2,7 +2,7 @@
 <div class="card card-register mx-auto mt-15">
     <div class="card-header">Informações do usuário</div>
     <div class="card-body">
-        <form>
+        <form ng-submit="u.atualizarDados()">
             <div class="form-group">
                 <label for="exampleInputEmail1">Nome</label>
                 <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" ng-disabled="true" ng-model="u.usuario.nome">
@@ -24,8 +24,8 @@
                 <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" ng-model="u.usuario.email">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Endereço</label>
-                <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" ng-model="u.usuario.endereco">
+                <label>Endereço</label>
+                <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" ng-model="u.usuario.endereco">
             </div>
             <div class="form-group">
                 <div class="form-row">
@@ -74,9 +74,9 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Responsável</label>
-                <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" ng-model="u.usuario.responsavel">
+                <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" ng-model="u.usuario.responsavel">
             </div>
-            <a class="btn btn-primary btn-block" href="login.html">Atualizar informações</a>
+            <button class="btn btn-primary btn-block" type="submit">Atualizar informações</a>
         </form>
     </div>
 </div>

@@ -32,11 +32,11 @@ angular
 
 
         var inicio = {
-            name: 'inicio',
-            templateUrl: 'parcial/index.html'
+            name: 'usuario',
+            templateUrl: 'parcial/usuario/index.html'
         }
         var home = {
-            name: 'inicio.home',
+            name: 'usuario.home',
             url: '/',
             templateUrl: 'parcial/usuario/home.html',
             controller: 'UsuarioController',
@@ -51,28 +51,32 @@ angular
             .state(inicio)
             .state(home)
             .state({
-                name: 'inicio.perfil',
+                name: 'usuario.perfil',
                 url: '/perfil',
                 templateUrl: 'parcial/usuario/perfil.html',
                 controller: 'UsuarioController',
                 controllerAs: 'u'
             })
             .state({
-                name: 'inicio.prontuario',
+                name: 'usuario.prontuario',
                 url: '/prontuario',
                 templateUrl: 'parcial/usuario/prontuario.html',
                 controller: 'UsuarioController',
                 controllerAs: 'u'
             })
             .state({
-                name: 'inicio.atestado',
+                name: 'usuario.atestado',
                 url: '/atestado',
                 templateUrl: 'parcial/usuario/atestado.html',
                 controller: 'UsuarioController',
                 controllerAs: 'u'
             })
             .state({
-                name: 'inicio.profissional',
+                name: 'profissional',
+                templateUrl: 'parcial/profissional/index.html'
+            })
+            .state({
+                name: 'profissional.profissional',
                 url: '/profissional',
                 templateUrl: 'parcial/profissional/profissional.html',
                 controller: 'ProfissionalController',

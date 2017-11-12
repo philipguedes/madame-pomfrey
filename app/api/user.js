@@ -10,7 +10,7 @@ var api = {};
 
 api.readUserData = function (req, res) {
   var path = '/user/' + req.body.path;
-  
+
   database.ref(path).once('value').then((data) => {
     console.log('lendo usuario')
     res.status(200);
@@ -22,13 +22,15 @@ api.readUserData = function (req, res) {
 }
 
 api.updateUser = function (req, res) {
+  console.log('entrou')
+  console.log(req.body);
   // TODO: update more than 1 property pls
   var path = '/user/' + req.body.path;
   var update = req.body.data;
-  
+
   var data = {};
-  data[path] = now;
-  
+  data[path] = update;
+
   database.ref().update(data).then(() => {
     res.status(200);
     res.json({
@@ -54,16 +56,16 @@ api.createUser = function (req, res) {
 
 api.generateCertificate = function (req, res) {
   var path;
-  
+
   database.ref(path).once('value').then((userData) => {
     var uuid = uuidv4();
     var date = moment();
     var day = date.format('D/M/YYYY');
     var hour = date.format('H:mm:ss');
-    
+
     // Generate certificate here
 
-    
+
     res.status(200);
     res.json({
       response: data
