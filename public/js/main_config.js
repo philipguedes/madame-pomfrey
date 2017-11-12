@@ -33,7 +33,14 @@ angular
         var inicio = {
             name: 'inicio',
             url: '/',
-            templateUrl: 'index.html',
+            templateUrl: 'parcial/home.html',
+            controller: 'UsuarioController',
+            controllerAs: 'u'
+        }
+        var tables = {
+            name: 'inicio.tables',
+            url: '/',
+            templateUrl: 'tables.html',
             controller: 'UsuarioController',
             controllerAs: 'u'
         }
