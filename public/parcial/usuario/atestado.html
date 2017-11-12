@@ -9,7 +9,7 @@
     <div class="nav-tabs-responsive scrollbars">
         <ul class="nav nav-tabs nav-justified">
             <li class="active">
-                <button class="btn btn-linkt" data-toggle="tab" data-target="#vacinas">Vacinas</button>
+                <button class="btn btn-linkt" ng-click="u.generateCertificate()" data-toggle="tab" data-target="#vacinas">Vacinas</button>
             </li>
             <li>
                 <button class="btn btn-link" data-toggle="tab" data-target="#exames">Exames</button>
@@ -100,7 +100,7 @@
                         <tbody>
                             <tr>
                                 <th>Tuberculose</th>
-                                <td></td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tuberculose['1102844353000'].data}}<br>{{u.usuario.vacinas.Tuberculose['1102844353000'].local}}<br>{{u.usuario.vacinas.Tuberculose['1102844353000'].responsavel}}</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -109,25 +109,25 @@
                             </tr>
                             <tr>
                                 <th>Poliomielite</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Poliomielite['1076571553000'].data}}<br>{{u.usuario.vacinas.Poliomielite['1076571553000'].local}}<br>{{u.usuario.vacinas.Poliomielite['1076571553000'].responsavel}}</td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Poliomielite['1081755553000'].data}}<br>{{u.usuario.vacinas.Poliomielite['1081755553000'].local}}<br>{{u.usuario.vacinas.Poliomielite['1081755553000'].responsavel}}</td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Poliomielite['1102844753000'].data}}<br>{{u.usuario.vacinas.Poliomielite['1102844753000'].local}}<br>{{u.usuario.vacinas.Poliomielite['1102844753000'].responsavel}}</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <th>Tetravalente</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tetravalente['1076571553000'].data}}<br>{{u.usuario.vacinas.Tetravalente['1076571553000'].local}}<br>{{u.usuario.vacinas.Tetravalente['1076571553000'].responsavel}}</td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tetravalente['1081755553000'].data}}<br>{{u.usuario.vacinas.Tetravalente['1081755553000'].local}}<br>{{u.usuario.vacinas.Tetravalente['1081755553000'].responsavel}}</td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tetravalente['1100844753000'].data}}<br>{{u.usuario.vacinas.Tetravalente['1100844753000'].local}}<br>{{u.usuario.vacinas.Tetravalente['1100844753000'].responsavel}}</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <th>Sarampo, Rubéola e Caxumba</th>
-                                <td></td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas['Sarampo, Rubeola e Caxumba']['1100844753000'].data}}<br>{{u.usuario.vacinas['Sarampo, Rubeola e Caxumba']['1100844753000'].local}}<br>{{u.usuario.vacinas['Sarampo, Rubeola e Caxumba']['1100844753000'].responsavel}}</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -136,16 +136,16 @@
                             </tr>
                             <tr>
                                 <th>Hepatite B</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td bgcolor="#C8E6C9"></td>
+                                <td bgcolor="#C8E6C9"></td>
+                                <td bgcolor="#C8E6C9"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <th>Febre Amarela</th>
-                                <td></td>
+                                <td>{{u.usuario.vacinas['Febre Amarela']['1081755553000'].data}}<br>{{u.usuario.vacinas['Febre Amarela']['1081755553000'].local}}<br>{{u.usuario.vacinas['Febre Amarela']['1081755553000'].responsavel}}</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -197,8 +197,8 @@
 
             <p class="texto">
                 Atestado emitido em
-                <strong>DATA</strong> (Horário de Brasília), sob o código
-                <strong>CÓDIGO</strong> com vigência de
+                <strong>{{u.DATA}}</strong> (Horário de Brasília), sob o código
+                <strong>{{u.CODIGO}}</strong> com vigência de
                 <strong>30 (trinta) dias</strong>.
             </p>
             <p class="texto">
