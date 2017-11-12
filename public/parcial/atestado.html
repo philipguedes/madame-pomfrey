@@ -6,50 +6,24 @@
         Selecione a especialidade para imprima os atestados do seu prontuario.
     </p>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-    <div class="card" style="margin-left:5%;margin-right:5%;">
-        <div class="card-header">
-            <h6 class="card-title">Febre Amarela
-                <strong class="pull-right">11/11/2017</strong>
-            </h6>
-        </div>
-        <div class="card-body">
-            Vacina da Febre Amarela foi dada na data...
-        </div>
-        <div class="card-footer">
-            <div class="btn-link-toolbar pull-right">
-                <span class="btn-separator"></span>
-                <button class="btn btn-link btn-icon-text">
-                    <i class="fa fa-asterisk" aria-hidden="true" style="color:blue"></i> Detalhes da Vacina</button>
-            </div>
-        </div>
+    <div class="nav-tabs-responsive scrollbars">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active">
+                <button class="btn btn-linkt" data-toggle="tab" data-target="#vacinas">Vacinas</button>
+            </li>
+            <li>
+                <button class="btn btn-link" data-toggle="tab" data-target="#exames">Exames</button>
+            </li>
+        </ul>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-    <p>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
-            aria-controls="collapseExample">
-            Vacinação
-        </button>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false"
-            aria-controls="collapseExample1">
-            Raio-X
-        </button>
-    </p>
-
-    <div class="collapse" id="collapseExample">
+    <div class="tab-content">
+        <div class="tab-pane fade" id="exames">
+            <div class="card card-body">
+                Construindo
+            </div>
+        </div>
+    <div class="tab-pane fade in active" id="vacinas">
         <div class="card card-body">
             <div id="print">
                 <center>
@@ -239,6 +213,6 @@
                 </strong>
             </p>
         </div>
-    </div>
+    </div></div>
 
 </body>
