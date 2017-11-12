@@ -12,7 +12,7 @@ angular
         },
         {
             imagem:"https://i1.wp.com/www.vozdepernambuco.com/wp-content/uploads/2017/04/UBS.jpg?fit=570%2C317", 
-            link:"http://www.pac.gov.br/infraestrutura-social-e-urbana/ubs-unidade-basica-de-saude",
+            link:"http://www.prefeitura.sp.gov.br/cidade/secretarias/saude/",
             nome:"Unidades Básica de Saúde",
             texto:"Veja como funciona uma UBS e os Postos mais próximos da sua casa.",
             data:"Postado há 1h atrás",
