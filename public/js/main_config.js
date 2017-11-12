@@ -80,7 +80,7 @@ angular
                 url: '/profissional',
                 templateUrl: 'parcial/profissional/profissional.html',
                 controller: 'ProfissionalController',
-                controllerAs: 'p'
+                controllerAs: 'u'
             })
             .state({
                 name: 'certificado',

@@ -1,7 +1,7 @@
 <div class="col-XS-2" style="margin-left:0;margin-right:0; font-size:30px; font-family:verdana; text-align:center">
-        <div class="mb-0 mt-4">
-            <i class="fa fa-newspaper-o"></i> Atualização de cadastro do paciente</div>
-    </div>
+    <div class="mb-0 mt-4">
+        <i class="fa fa-newspaper-o"></i> Atualização de cadastro do paciente</div>
+</div>
 
 <div class="card card-register mx-auto mt-15">
     <div class="card-header">Informações do usuário</div>
@@ -9,28 +9,214 @@
         <form>
             <div class="form-group">
                 <label for="exampleInputEmail1">Cartão SUS</label>
-                <input class="form-control" id="exampleInputEmail1" ng-model="path" ng-init="path='706905129075639'" type="text" aria-describedby="emailHelp" placeholder="Informe o número do cartão SUS do paciente">
+                <input class="form-control" id="exampleInputEmail1" ng-model="path" ng-init="path='706905129075639'" type="text" aria-describedby="emailHelp"
+                    placeholder="Informe o número do cartão SUS do paciente">
             </div>
     </div>
     <center>
-    <div class="nav-tabs-responsive scrollbars">
+        <div class="nav-tabs-responsive scrollbars">
             <ul class="nav nav-tabs nav-justified">
                 <li class="active">
-                    <button class="btn btn-linkt" ng-click="p.test()" data-toggle="tab" data-target="#atividade">Vacinas</button>
+                    <button class="btn btn-linkt" ng-click="u.test()" data-toggle="tab" data-target="#atividade">Vacinas</button>
                 </li>
             </ul>
         </div>
-    </div>
+</div>
 </center>
 </div>
 <br>
 
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Registrar Nova Vacina</h4>
+                <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Cartão SUS</label>
+                        <input class="form-control" id="exampleInputEmail1" ng-model="path" ng-init="path='706905129075639'" type="text" aria-describedby="emailHelp"
+                            placeholder="Informe o número do cartão SUS do paciente">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <div class="nav-tabs-responsive scrollbars">
     <div class="tab-content">
-            <div class="tab-pane fade" id="atividade">
-                <div class="card card-body">
-                    <div ng-bind-html="relatorio"></div>
+        <div class="tab-pane fade" id="atividade">
+            <div class="card card-body">
+                <div ng-bind-html="relatorio"></div>
+                <br>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Vacinas</th>
+                                <th>
+                                    <center>Data
+                                        <br> Local
+                                        <br> Responsável</td>
+                                    </center>
+                                </th>
+                                <th>
+                                    <center>Data
+                                        <br> Local
+                                        <br> Responsável</td>
+                                    </center>
+                                </th>
+                                <th>
+                                    <center>Data
+                                        <br> Local
+                                        <br> Responsável</td>
+                                    </center>
+                                </th>
+                                <th>
+                                    <center>Data
+                                        <br> Local
+                                        <br> Responsável</td>
+                                    </center>
+                                </th>
+                                <th>
+                                    <center>Data
+                                        <br> Local
+                                        <br> Responsável</td>
+                                    </center>
+                                </th>
+                                <th>
+                                    <center>Data
+                                        <br> Local
+                                        <br> Responsável</td>
+                                    </center>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th>Tuberculose</th>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tuberculose['1102844353000'].data}}
+                                    <br>{{u.usuario.vacinas.Tuberculose['1102844353000'].local}}
+                                    <br>{{u.usuario.vacinas.Tuberculose['1102844353000'].responsavel}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Poliomielite</th>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Poliomielite['1076571553000'].data}}
+                                    <br>{{u.usuario.vacinas.Poliomielite['1076571553000'].local}}
+                                    <br>{{u.usuario.vacinas.Poliomielite['1076571553000'].responsavel}}</td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Poliomielite['1081755553000'].data}}
+                                    <br>{{u.usuario.vacinas.Poliomielite['1081755553000'].local}}
+                                    <br>{{u.usuario.vacinas.Poliomielite['1081755553000'].responsavel}}</td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Poliomielite['1102844753000'].data}}
+                                    <br>{{u.usuario.vacinas.Poliomielite['1102844753000'].local}}
+                                    <br>{{u.usuario.vacinas.Poliomielite['1102844753000'].responsavel}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Tetravalente</th>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tetravalente['1076571553000'].data}}
+                                    <br>{{u.usuario.vacinas.Tetravalente['1076571553000'].local}}
+                                    <br>{{u.usuario.vacinas.Tetravalente['1076571553000'].responsavel}}</td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tetravalente['1081755553000'].data}}
+                                    <br>{{u.usuario.vacinas.Tetravalente['1081755553000'].local}}
+                                    <br>{{u.usuario.vacinas.Tetravalente['1081755553000'].responsavel}}</td>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tetravalente['1100844753000'].data}}
+                                    <br>{{u.usuario.vacinas.Tetravalente['1100844753000'].local}}
+                                    <br>{{u.usuario.vacinas.Tetravalente['1100844753000'].responsavel}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Sarampo, Rubéola e Caxumba</th>
+                                <td bgcolor="#C8E6C9">{{u.usuario.vacinas['Sarampo, Rubeola e Caxumba']['1100844753000'].data}}
+                                    <br>{{u.usuario.vacinas['Sarampo, Rubeola e Caxumba']['1100844753000'].local}}
+                                    <br>{{u.usuario.vacinas['Sarampo, Rubeola e Caxumba']['1100844753000'].responsavel}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Hepatite B</th>
+                                <td bgcolor="#C8E6C9"></td>
+                                <td bgcolor="#C8E6C9"></td>
+                                <td bgcolor="#C8E6C9"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Febre Amarela</th>
+                                <td>{{u.usuario.vacinas['Febre Amarela']['1081755553000'].data}}
+                                    <br>{{u.usuario.vacinas['Febre Amarela']['1081755553000'].local}}
+                                    <br>{{u.usuario.vacinas['Febre Amarela']['1081755553000'].responsavel}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Difteria e Tetano</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Sarampo e Rubéola</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Gripe</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Pneumonia</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
     </div>
+</div>
 </div>

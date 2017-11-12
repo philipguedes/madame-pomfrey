@@ -11,6 +11,18 @@ angular
 
         // vm.notImplemented()
 
+        $http.post('/user/read', { path: vm.path })
+            .then((resposta, erro) => {
+                if (erro) {
+                    console.log('Deu ruim carai');
+                    console.log(erro)
+                } else {
+                    console.log(resposta);
+                    vm.usuario = resposta.data.response
+                    console.log(vm.usuario);
+                }
+            })
+
         vm.test = function () {
             if (vm.path == $scope.path) {
                 $scope.relatorio = $sce.trustAsHtml(
@@ -18,7 +30,7 @@ angular
                     '<div>O paciente não tomou as seguintes vacinas: <p>Vacina contra Hepatite B</p>' +
                     '<ul class="nav nav-justified">' +
                     '<li class="disabled">' +
-                    '<button class="btn btn-linkt">Clique aqui para registrar nova vacina</button>' +
+                    '<button class="btn btn-linkt" data-toggle="modal" data-target="#myModal">Clique aqui para registrar nova vacina</button>' +
                     '</li>' +
                     '</ul>' +
                     '</div>'
