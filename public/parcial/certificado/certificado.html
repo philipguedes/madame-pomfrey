@@ -1,0 +1,20 @@
+<form action="" ng-submit="c.buscarCertificado()">
+    <div class="card" style="margin-left:10%;margin-right:10%;">
+        <div class="row" style="padding-left:5%;">
+            <div class="col-xs-6">
+                <label for="">Numero do Certificado</label>
+                <input type="text" class="form-control" ng-model="c.buscar.certificado">
+            </div>
+            <div class="col-xs-6">
+                <label for="">Numero do Usuário</label>
+                <input type="text" class="form-control" ng-model="c.buscar.path">
+            </div>
+        </div>
+        <br>
+        <div class="row" style="padding-left:5%;">
+            <div class="col-xs-6">
+                <button type="submit" class="btn btn-info">Buscar</button>
+            </div>
+        </div>
+        <br>
+</form>
