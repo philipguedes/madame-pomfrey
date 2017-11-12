@@ -81,6 +81,17 @@ angular
                 templateUrl: 'parcial/profissional/profissional.html',
                 controller: 'ProfissionalController',
                 controllerAs: 'p'
+            })
+            .state({
+                name: 'certificado',
+                templateUrl: 'parcial/certificado/index.html'
+            })
+            .state({
+                name: 'certificado.certificado',
+                url: '/certificado',
+                templateUrl: 'parcial/certificado/certificado.html',
+                controller: 'CertificadoController',
+                controllerAs: 'c'
             });
 
         $urlRouterProvider.otherwise('/');
