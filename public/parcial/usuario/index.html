@@ -17,34 +17,29 @@
 
 
       </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="DASHBOARD É O CARAI">
-        <a class="nav-link" ui-sref="inicio.home">
+      <li class="nav-item" ng-show="u.tipo === 'Usuario'" ng-hide="p.tipo === 'Profissional'" data-toggle="tooltip" data-placement="right"
+        title="DASHBOARD É O CARAI">
+        <a class="nav-link" ui-sref="usuario.home">
           <i class="fa fa-fw fa-home"></i>
           <span class="nav-link-text">Inicio</span>
         </a>
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-        <a class="nav-link" ui-sref="inicio.perfil">
+        <a class="nav-link" ui-sref="usuario.perfil">
           <i class="fa fa-fw fa-address-card"></i>
           <span class="nav-link-text">Perfil</span>
         </a>
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-        <a class="nav-link" ui-sref="inicio.prontuario">
+        <a class="nav-link" ui-sref="usuario.prontuario">
           <i class="fa fa-fw fa-table"></i>
           <span class="nav-link-text">Prontuário</span>
         </a>
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-        <a class="nav-link" ui-sref="inicio.atestado">
+        <a class="nav-link" ui-sref="usuario.atestado">
           <i class="fa fa-fw fa-link"></i>
           <span class="nav-link-text">Atestado</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-        <a class="nav-link" ui-sref="inicio.profissional">
-          <i class="fa fa-fw fa-link"></i>
-          <span class="nav-link-text">Profissional</span>
         </a>
       </li>
     </ul>

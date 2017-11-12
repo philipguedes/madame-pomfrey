@@ -1,7 +1,8 @@
 angular
     .module('madame-pomfrey')
-    .controller('UsuarioController', function ($scope, $http) {
+    .controller('UsuarioController', function ($scope, $http, $state) {
         vm = this;
+        vm.tipo = 'Usuario';
         //teste
         vm.home = [{
             imagem: "http://www.metodista.br/rronline/noticias/saude/2013/04/carteira-de-vacinacao/@@images/208c32ee-8d51-487a-bee5-5bbcb0b3fe46.jpeg",
@@ -17,7 +18,6 @@ angular
             texto: "Veja como funciona uma UBS e os Postos mais próximos da sua casa.",
             data: "Postado há 1h atrás",
         },
-
         {
             imagem: "http://santacasadeparanaiba.com/wp-content/uploads/2015/10/Campanha-Nacional-de-Vacina%C3%A7%C3%A3o-11.jpg",
             link: "./public/parcial/cart_vac.pdf",
@@ -50,8 +50,20 @@ angular
                 }
             })
 
+        vm.atualizarDados = function () {
+            console.log('Tentando atualizar...')
+            $http.post('/user/update', { path: vm.path, data: vm.usuario })
+                .then((resposta, erro) => {
+                    if (erro) {
+                        console.log(erro);
+                    } else {
+                        console.log(resposta);
+                        vm.usuario = resposta.data.message
+                    }
+                })
+        }
         vm.generateCertificate = function () {
-            $http.post('/user/certificate', { path: vm.path})
+            $http.post('/user/certificate', { path: vm.path })
                 .then((resposta, erro) => {
                     if (erro) {
                         console.log('Deu ruim carai');
