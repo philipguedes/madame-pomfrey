@@ -10,7 +10,7 @@
         <div class="nav-tabs-responsive scrollbars">
             <ul class="nav nav-tabs nav-justified">
                 <li class="active">
-                    <button class="btn btn-linkt" data-toggle="tab" data-target="#vacinas">Vacinas</button>
+                    <button class="btn btn-link" ng-click="u.generateCertificate()" data-toggle="tab" data-target="#vacinas">Vacinas</button>
                 </li>
                 <li>
                     <button class="btn btn-link" data-toggle="tab" data-target="#exames">Exames</button>
@@ -199,8 +199,8 @@
 
             <p class="texto">
                 Atestado emitido em
-                <strong>DATA</strong> (Horário de Brasília), sob o código
-                <strong>CÓDIGO</strong> com vigência de
+                <strong>{{u.DATA}}</strong> (Horário de Brasília), sob o código
+                <strong>{{u.CODIGO}}</strong> com vigência de
                 <strong>30 (trinta) dias</strong>.
             </p>
             <p class="texto">

@@ -50,6 +50,25 @@ angular
                 }
             })
 
+        vm.generateCertificate = function () {
+            $http.post('/user/certificate', { path: vm.path})
+                .then((resposta, erro) => {
+                    if (erro) {
+                        console.log('Deu ruim carai');
+                        console.log(erro)
+                    }
+                    else {
+                        console.log('uhu')
+                        console.log(resposta);
+                        var res = resposta.data.data;
+                        vm.DATA = res.data;
+                        vm.CODIGO = res.codigo;
+                        console.log(vm.DATA);
+                        console.log(vm.CODIGO)
+                    }
+                })
+        }
+
 
 
     })
