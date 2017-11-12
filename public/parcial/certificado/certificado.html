@@ -1,13 +1,13 @@
-<form action="" ng-submit="c.buscarCertificado()">
+<form action="" ng-submit="u.buscarCertificado()">
     <div class="card" style="margin-left:10%;margin-right:10%;">
         <div class="row" style="padding-left:5%;">
             <div class="col-xs-6">
                 <label for="">Numero do Certificado</label>
-                <input type="text" class="form-control" ng-model="c.buscar.certificado">
+                <input type="text" class="form-control" ng-model="u.buscar.certificado">
             </div>
             <div class="col-xs-6">
                 <label for="">Numero do Usuário</label>
-                <input type="text" class="form-control" ng-model="c.buscar.path">
+                <input type="text" class="form-control" ng-model="u.buscar.path">
             </div>
         </div>
         <br>
@@ -17,4 +17,206 @@
             </div>
         </div>
         <br>
+    </div>
 </form>
+<hr>
+<div class="row" ng-show="u.usuario" style="margin-left:10%;margin-right:10%;">
+    <div class="card card-body">
+        <div id="print">
+            <center>
+                <strong>
+                    <a href="#" onclick="self.print()" class="boxshadow">Imprimir</a>
+                </strong>
+            </center>
+        </div>
+
+        <div id="header">
+            <center>
+                <img src="parcial/pomfrey.png" />
+
+            </center>
+        </div>
+
+        <div id="atestado1">
+            <h1>
+                <center>ATESTADO DE VACINAÇÃO</center>
+            </h1>
+            <p class="texto">
+                Atestamos, para os devidos fins que
+                <strong>{{u.usuario.nome}}</strong>
+                registrado no CPF
+                <strong>{{u.usuario.cpf}}</strong>
+                tomou as vacinas apresentadas abaixo.
+            </p>
+
+
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Vacinas</th>
+                            <th>
+                                <center>Data
+                                    <br> Local
+                                    <br> Responsável</td>
+                                </center>
+                            </th>
+                            <th>
+                                <center>Data
+                                    <br> Local
+                                    <br> Responsável</td>
+                                </center>
+                            </th>
+                            <th>
+                                <center>Data
+                                    <br> Local
+                                    <br> Responsável</td>
+                                </center>
+                            </th>
+                            <th>
+                                <center>Data
+                                    <br> Local
+                                    <br> Responsável</td>
+                                </center>
+                            </th>
+                            <th>
+                                <center>Data
+                                    <br> Local
+                                    <br> Responsável</td>
+                                </center>
+                            </th>
+                            <th>
+                                <center>Data
+                                    <br> Local
+                                    <br> Responsável</td>
+                                </center>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th>Tuberculose</th>
+                            <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tuberculose['1102844353000'].data}}
+                                <br>{{u.usuario.vacinas.Tuberculose['1102844353000'].local}}
+                                <br>{{u.usuario.vacinas.Tuberculose['1102844353000'].responsavel}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Poliomielite</th>
+                            <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Poliomielite['1076571553000'].data}}
+                                <br>{{u.usuario.vacinas.Poliomielite['1076571553000'].local}}
+                                <br>{{u.usuario.vacinas.Poliomielite['1076571553000'].responsavel}}</td>
+                            <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Poliomielite['1081755553000'].data}}
+                                <br>{{u.usuario.vacinas.Poliomielite['1081755553000'].local}}
+                                <br>{{u.usuario.vacinas.Poliomielite['1081755553000'].responsavel}}</td>
+                            <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Poliomielite['1102844753000'].data}}
+                                <br>{{u.usuario.vacinas.Poliomielite['1102844753000'].local}}
+                                <br>{{u.usuario.vacinas.Poliomielite['1102844753000'].responsavel}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Tetravalente</th>
+                            <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tetravalente['1076571553000'].data}}
+                                <br>{{u.usuario.vacinas.Tetravalente['1076571553000'].local}}
+                                <br>{{u.usuario.vacinas.Tetravalente['1076571553000'].responsavel}}</td>
+                            <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tetravalente['1081755553000'].data}}
+                                <br>{{u.usuario.vacinas.Tetravalente['1081755553000'].local}}
+                                <br>{{u.usuario.vacinas.Tetravalente['1081755553000'].responsavel}}</td>
+                            <td bgcolor="#C8E6C9">{{u.usuario.vacinas.Tetravalente['1100844753000'].data}}
+                                <br>{{u.usuario.vacinas.Tetravalente['1100844753000'].local}}
+                                <br>{{u.usuario.vacinas.Tetravalente['1100844753000'].responsavel}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Sarampo, Rubéola e Caxumba</th>
+                            <td bgcolor="#C8E6C9">{{u.usuario.vacinas['Sarampo, Rubeola e Caxumba']['1100844753000'].data}}
+                                <br>{{u.usuario.vacinas['Sarampo, Rubeola e Caxumba']['1100844753000'].local}}
+                                <br>{{u.usuario.vacinas['Sarampo, Rubeola e Caxumba']['1100844753000'].responsavel}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Hepatite B</th>
+                            <td bgcolor="#C8E6C9"></td>
+                            <td bgcolor="#C8E6C9"></td>
+                            <td bgcolor="#C8E6C9"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Febre Amarela</th>
+                            <td>{{u.usuario.vacinas['Febre Amarela']['1081755553000'].data}}
+                                <br>{{u.usuario.vacinas['Febre Amarela']['1081755553000'].local}}
+                                <br>{{u.usuario.vacinas['Febre Amarela']['1081755553000'].responsavel}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Difteria e Tetano</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Sarampo e Rubéola</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Gripe</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Pneumonia</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <p class="texto">
+            Atestado emitido em
+            <strong>{{u.DATA}}</strong> (Horário de Brasília), sob o código
+            <strong>{{u.CODIGO}}</strong> com vigência de
+            <strong>30 (trinta) dias</strong>.
+        </p>
+    </div>
+</div>
+</div>
+</div>
