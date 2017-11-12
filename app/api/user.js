@@ -12,6 +12,7 @@ api.readUserData = function (req, res) {
   var path = '/user/' + req.body.path;
   
   database.ref(path).once('value').then((data) => {
+    console.log('lendo usuario')
     res.status(200);
     res.json({
       response: data

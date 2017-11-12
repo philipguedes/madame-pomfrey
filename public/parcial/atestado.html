@@ -1,3 +1,224 @@
-<h1>Atestado</h1>
-<h3>{{u.usuario.cpf}}</h3>
-<h3>{{u.usuario.nome}}</h3>
+<body marginwidth="0" marginheight="0">
+
+    <p class="texto">
+        Selecione a especialidade para imprima os atestados do seu prontuario.
+    </p>
+
+    <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+            aria-controls="collapseExample">
+            Vacinação
+        </button>
+    </p>
+
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <div id="print">
+                <center>
+                    <strong>
+                        <a href="#" onclick="self.print()" class="boxshadow">Imprimir</a>
+                    </strong>
+                </center>
+            </div>
+
+            <div id="header">
+                <center>
+                    <img src="http://vignette2.wikia.nocookie.net/harrypotter/images/5/56/Madam_Pomfrey.png/revision/latest?cb=20131110073338"
+                        alt>
+                </center>
+            </div>
+
+            <div id="atestado1">
+                <h1>
+                    <center>ATESTADO DE VACINAÇÃO</center>
+                </h1>
+                <p class="texto">
+                    Atestamos, para os devidos fins que
+                    <strong>{{u.usuario.nome}}</strong>
+                    registrado no CPF
+                    <strong>{{u.usuario.cpf}}</strong>
+                    tomou as vacinas apresentadas abaixo.
+                </p>
+
+
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Vacinas</th>
+                                <th>
+                                    <td>Data</td>
+                                    <td>Local</td>
+                                    <td>Responsável</td>
+                                </th>
+                                <th>Local</th>
+                                <th>Data</th>
+                                <th>Data</th>
+                                <th>Data</th>
+                                <th>Data</th>
+                                <th>Data</th>
+                                <th>Data</th>
+                                <th>Data</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th>Tuberculose</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Poliomielite</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Tetravalente</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Sarampo, Rubéola e Caxumba</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Hepatite B</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Febre Amarela</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Difteria e Tetano</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Sarampo e Rubéola</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Gripe</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Pneumonia</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <p class="texto">
+                Atestado emitido em
+                <strong>DATA</strong> (Horário de Brasília), sob o código
+                <strong>CÓDIGO</strong> com vigência de
+                <strong>30 (trinta) dias</strong>.
+            </p>
+            <p class="texto">
+                A autenticidade deste documento poderá ser confirmada no endereço"
+                <cite> ENDERECO </cite>
+                com as informações acima de data, hora e código.
+            </p>
+            <p>
+                <strong>
+                    "Este documento é emitido eletronicamente e não contém carimbo nem assinatura a autenticidade deve ser verificada exclusivamente
+                    pelo código constante no documento."
+                </strong>
+            </p>
+        </div>
+    </div>
+
+</body>
