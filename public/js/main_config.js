@@ -53,9 +53,23 @@ angular
             .state(inicio)
             .state(home)
             .state({
-                name: 'inicio.historico',
-                url: '/',
-                templateUrl: 'parcial/historico.html',
+                name: 'inicio.perfil',
+                url: '/perfil',
+                templateUrl: 'parcial/perfil.html',
+                controller: 'UsuarioController',
+                controllerAs: 'u'
+            })
+            .state({
+                name: 'inicio.prontuario',
+                url: '/prontuario',
+                templateUrl: 'parcial/prontuario.html',
+                controller: 'UsuarioController',
+                controllerAs: 'u'
+            })
+            .state({
+                name: 'inicio.atestado',
+                url: '/atestado',
+                templateUrl: 'parcial/atestado.html',
                 controller: 'UsuarioController',
                 controllerAs: 'u'
             });
