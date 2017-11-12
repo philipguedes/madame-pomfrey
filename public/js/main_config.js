@@ -23,7 +23,8 @@ angular
     .module('madame-pomfrey', ['ngRoute',
         'ngResource',
         'ui.router',
-        'ui.router.stateHelper'
+        'ui.router.stateHelper',
+        'uiRouterStyles'
     ])
     .config(function ($routeProvider, $stateProvider, $locationProvider, $httpProvider, $urlRouterProvider, $qProvider) {
 
@@ -39,7 +40,9 @@ angular
             url: '/',
             templateUrl: 'parcial/home.html',
             controller: 'UsuarioController',
-            controllerAs: 'u'
+            controllerAs: 'u',
+            data:{ 
+                css:'parcial/postit.css'}
         }
         var historico = {
             name: 'inicio.historico',
