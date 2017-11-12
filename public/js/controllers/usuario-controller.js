@@ -20,7 +20,7 @@ angular
         },
         {
             imagem: "http://santacasadeparanaiba.com/wp-content/uploads/2015/10/Campanha-Nacional-de-Vacina%C3%A7%C3%A3o-11.jpg",
-            link: "./public/parcial/cart_vac.pdf",
+            link: "http://bvsms.saude.gov.br/bvs/publicacoes/cart_vac.pdf",
             nome: "Cartilha de vacinas",
             texto: "Para quem quer mesmo saber das coisas.",
             data: "Postado há 1h atrás",
