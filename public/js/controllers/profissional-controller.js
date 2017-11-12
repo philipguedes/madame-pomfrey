@@ -23,6 +23,9 @@ angular
                 }
             })
 
+
+        vm.adicionarHepatite = function () {
+        }
         vm.test = function () {
             if (vm.path == $scope.path) {
                 $scope.relatorio = $sce.trustAsHtml(
